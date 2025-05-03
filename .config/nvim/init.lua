@@ -1006,3 +1006,9 @@ require('lazy').setup({
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
+
+vim.keymap.set("i", "", "u")
+vim.keymap.set("i", "<a-Down>", "yyp")
+vim.keymap.set("n", "", " sf")
+vim.keymap.set("n", "", ":q<cr>")
+vim.keymap.set("n", "", ":w<cr>")
