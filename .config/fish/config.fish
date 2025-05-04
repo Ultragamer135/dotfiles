@@ -1,1 +1,1 @@
-abbr --add :q exit
+function gitignore; curl -sL https://www.gitignore.io/api/; end
