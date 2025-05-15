@@ -407,6 +407,9 @@ tmux_conf_urlscan_options="--compact --dedupe"
 # move status line to top
 #set -g status-position top
 
+# New window shortcut
+bind-key -n C-t new-window
+
 
 # -- tpm -----------------------------------------------------------------------
 

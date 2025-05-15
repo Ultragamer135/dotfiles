@@ -1,7 +1,7 @@
 # Launch tmux on startup
 if status is-interactive
 and not set -q TMUX
-    exec tmux
+    exec tmux new-session -t T \; new-window
 end
 
 abbr --add :q exit # Yayy vim
