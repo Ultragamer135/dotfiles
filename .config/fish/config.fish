@@ -1,3 +1,9 @@
+# Launch tmux on startup
+if status is-interactive
+and not set -q TMUX
+    exec tmux
+end
+
 abbr --add :q exit
 # pnpm
 set -gx PNPM_HOME "/home/elin/.local/share/pnpm"
