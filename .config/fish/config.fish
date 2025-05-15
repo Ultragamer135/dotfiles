@@ -4,7 +4,9 @@ and not set -q TMUX
     exec tmux
 end
 
-abbr --add :q exit
+abbr --add :q exit # Yayy vim
+abbr --add pacman sudo pacman # Because I'm tired of typing 'sudo'
+
 # pnpm
 set -gx PNPM_HOME "/home/elin/.local/share/pnpm"
 if not string match -q -- $PNPM_HOME $PATH
