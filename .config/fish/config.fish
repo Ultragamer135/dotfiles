@@ -1,7 +1,7 @@
 # Launch tmux on startup
 if status is-interactive
 and not set -q TMUX
-    exec tmux new-session -t T \; new-window
+    exec tmux new-session -t T \; if-shell "test "$(tmux list-windows | count)" -eq 1" "new-window"
 end
 
 abbr --add :q exit # Yayy vim
