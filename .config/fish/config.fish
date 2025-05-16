@@ -14,6 +14,7 @@ function :q! -d 'Kill the tmux session.' # Kill session and exit
     exit
 end
 abbr --add pacman sudo pacman # Because I'm tired of typing 'sudo'
+abbr --add oil Oil
 
 # pnpm
 set -gx PNPM_HOME "/home/elin/.local/share/pnpm"
@@ -24,6 +25,6 @@ end
 
 # Functions
 function gitignore; curl -sL https://www.gitignore.io/api/$argv; end # Gitignore generator
-function oil; nvim +Oil $argv; end # Open oil in current dir
+function Oil; nvim +Oil $argv; end # Open oil in current dir
 function cheat; curl cheat.sh/$argv | bat; end # Cheat sheet!
 function mkcd; mkdir -p $argv[1] && cd $argv[1]; end # Make a directory and enter it
