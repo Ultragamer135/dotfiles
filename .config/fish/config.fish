@@ -25,4 +25,5 @@ end
 # Functions
 function gitignore; curl -sL https://www.gitignore.io/api/$argv; end # Gitignore generator
 function oil; nvim +Oil $argv; end # Open oil in current dir
+function cheat; curl cheat.sh/$argv | bat; end # Cheat sheet!
 function mkcd; mkdir -p $argv[1] && cd $argv[1]; end # Make a directory and enter it
