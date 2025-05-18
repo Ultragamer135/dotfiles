@@ -23,6 +23,9 @@ if not string match -q -- $PNPM_HOME $PATH
 end
 # pnpm end
 
+# Go
+fish_add_path /usr/local/go/bin
+
 # Functions
 function gitignore; curl -sL https://www.gitignore.io/api/$argv; end # Gitignore generator
 function wttr; curl "https://wttr.in/$argv?1F"; end # Weather
