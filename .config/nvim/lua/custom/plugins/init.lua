@@ -4,7 +4,7 @@
 -- See the kickstart.nvim README for more information
 return {
 	{
-		'stevearc/oil.nvim',
+		"stevearc/oil.nvim",
 		---@module 'oil'
 		---@type oil.SetupOpts
 		opts = {},
@@ -14,8 +14,7 @@ return {
 		-- Lazy loading is not recommended because it is very tricky to make it work correctly in all situations.
 		lazy = false,
 	},
-	{
-		"ggandor/leap.nvim",
-	},
+	{ "ggandor/leap.nvim" },
 	{ "tpope/vim-repeat" },
+	{ "tpope/vim-fugitive" },
 }
