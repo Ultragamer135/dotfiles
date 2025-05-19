@@ -17,4 +17,6 @@ return {
 	{ "ggandor/leap.nvim" },
 	{ "tpope/vim-repeat" },
 	{ "tpope/vim-fugitive" },
+	{ "tpope/vim-rhubarb" },
+	{ "kdheepak/lazygit.nvim" },
 }
