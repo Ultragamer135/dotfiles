@@ -1,5 +1,6 @@
 # Launch tmux on startup
 if status is-interactive
+and not status is-login
 and not set -q TMUX
     exec tmux new-session -t T \; if-shell "test '$(tmux list-windows | count)' -gt 0" "new-window"
 end
