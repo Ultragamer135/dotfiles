@@ -36,9 +36,6 @@ end
 # Go
 fish_add_path /usr/local/go/bin
 
-# TheFuck
-if which fuck; thefuck --alias | source &> /dev/null; end
-
 # Functions
 function gitignore; curl -sL https://www.gitignore.io/api/$argv; end # Gitignore generator
 function wttr; curl "https://wttr.in/$argv?1F"; end # Weather
