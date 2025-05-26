@@ -1,12 +1,10 @@
 # Launch tmux on startup
 if status is-interactive
 and not status is-login
-and not set -q TMUX
+and not [ $DISPLAY ] # Don't run tmux if in a visual enviroment
+and not set -q TMUX # No nesting tmux!
     exec tmux new-session -t T \; if-shell "test '$(tmux list-windows | count)' -gt 0" "new-window"
 end
-
-# Ssh keychain
-eval $(keychain -q)
 
 # Abbreviations
 abbr --add :q exit # Yayy vim
