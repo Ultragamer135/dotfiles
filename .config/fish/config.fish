@@ -37,7 +37,7 @@ end
 fish_add_path /usr/local/go/bin
 
 # TheFuck
-if which fuck; thefuck --alias | source; end
+if which fuck; thefuck --alias | source &> /dev/null; end
 
 # Functions
 function gitignore; curl -sL https://www.gitignore.io/api/$argv; end # Gitignore generator
