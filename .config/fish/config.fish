@@ -6,6 +6,16 @@ and not set -q TMUX # No nesting tmux!
     exec tmux new-session -t T \; if-shell "test '$(tmux list-windows | count)' -gt 0" "new-window"
 end
 
+# Binds
+function fish_user_key_bindings
+    fish_default_key_bindings -M insert
+    fish_vi_key_bindings --no-erase insert
+end
+
+# Vars
+set -gx EDITOR nvim
+set -gx VISUAL nvim
+
 # Abbreviations
 abbr --add :q exit # Yayy vim
 function :q! -d 'Kill the tmux session.' # Kill session and exit
