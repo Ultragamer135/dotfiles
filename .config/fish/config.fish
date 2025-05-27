@@ -1,11 +1,3 @@
-# Launch tmux on startup
-if status is-interactive
-and not status is-login
-and not [ $DISPLAY ] # Don't run tmux if in a visual enviroment
-and not set -q TMUX # No nesting tmux!
-    exec tmux new-session -t T \; if-shell "test '$(tmux list-windows | count)' -gt 0" "new-window"
-end
-
 # Binds
 function fish_user_key_bindings
     fish_default_key_bindings -M insert
@@ -19,9 +11,8 @@ set -gx MANPAGER 'nvim +Man!'
 
 # Abbreviations
 abbr --add :q exit # Yayy vim
-function :q! -d 'Kill the tmux session.' # Kill session and exit
-    tmux kill-session
-    exit
+function :q! # Kill session and exit
+    tmux kill-session; exit
 end
 abbr --add pacman sudo pacman # Because I'm tired of typing 'sudo'
 abbr --add oil Oil
