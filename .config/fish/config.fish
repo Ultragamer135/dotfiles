@@ -1,3 +1,10 @@
+# Launch tmux on startup
+if status is-interactive
+and set -q WSL_DISTRO_NAME # Only if running in WSL
+and not set -q TMUX # No nesting tmux!
+    exec tmux new-session -t T \; if-shell "test '$(tmux list-windows | count)' -gt 0" "new-window"
+end
+
 # Binds
 function fish_user_key_bindings
     fish_default_key_bindings -M insert
