@@ -24,4 +24,4 @@ config.bind('Down', 'move-to-next-line', mode='caret')
 config.bind('Left', 'move-to-prev-char', mode='caret')
 config.bind('Right', 'move-to-next-char', mode='caret')
 # Autoconfig
-config.load_autconfig(False)
+config.load_autoconfig(False)
