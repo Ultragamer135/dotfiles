@@ -1,5 +1,5 @@
 # Options
-c.auto_save.dession = True
+c.auto_save.session = True
 c.colors.webpage.darkmode.enabled = True
 c.colors.webpage.preferred_color_scheme = "dark"
 # Keybinds
