@@ -20,4 +20,5 @@ return {
 	{ "tpope/vim-rhubarb" },
 	{ "kdheepak/lazygit.nvim" },
 	{ "Makaze/AnsiEsc" },
+	{ "xiyaowong/transparent.nvim" },
 }
