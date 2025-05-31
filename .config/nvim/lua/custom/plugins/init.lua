@@ -19,4 +19,5 @@ return {
 	{ "tpope/vim-fugitive" },
 	{ "tpope/vim-rhubarb" },
 	{ "kdheepak/lazygit.nvim" },
+	{ "Makaze/AnsiEsc" },
 }
