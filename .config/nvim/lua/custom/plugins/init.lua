@@ -4,7 +4,7 @@
 -- See the kickstart.nvim README for more information
 return {
 	{
-		"stevearc/oil.nvim",
+		"stevearc/oil.nvim", -- File manager
 		---@module 'oil'
 		---@type oil.SetupOpts
 		opts = {},
@@ -14,11 +14,16 @@ return {
 		-- Lazy loading is not recommended because it is very tricky to make it work correctly in all situations.
 		lazy = false,
 	},
-	{ "ggandor/leap.nvim" },
+	{ "ggandor/leap.nvim" }, -- Leap around file with R
 	{ "tpope/vim-repeat" },
-	{ "tpope/vim-fugitive" },
-	{ "tpope/vim-rhubarb" },
-	{ "kdheepak/lazygit.nvim" },
-	{ "Makaze/AnsiEsc" },
-	{ "xiyaowong/transparent.nvim" },
+	{ "tpope/vim-fugitive" }, -- Git commands
+	{ "tpope/vim-rhubarb" }, -- Fugitive github support
+	{ "kdheepak/lazygit.nvim" }, -- LazyGit integration
+	{ "Makaze/AnsiEsc" }, -- Attempt to render ansi escape codes correctly
+	{ "xiyaowong/transparent.nvim" }, -- Pretty transparency
+	{
+		"winston0410/range-highlight.nvim", -- Highlight ranges in nvim commands
+		event = { "CmdlineEnter" },
+		opts = {},
+	},
 }
