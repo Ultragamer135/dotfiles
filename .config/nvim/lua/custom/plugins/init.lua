@@ -26,4 +26,5 @@ return {
 		event = { "CmdlineEnter" },
 		opts = {},
 	},
+	{ "tidalcycles/vim-tidal" }, -- Yay music
 }

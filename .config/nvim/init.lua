@@ -937,14 +937,14 @@ require("lazy").setup({
 -- vim: ts=2 sts=2 sw=2 et
 
 -- My keybinds =]
---vim.keymap.set({ "i", "n" }, "", "u")
 vim.keymap.set("i", "<a-Down>", "yyp")
 vim.keymap.set("n", "<C-k>", " sf")
-vim.keymap.set("n", "", ":q<cr>")
-vim.keymap.set("n", "", ":w<cr>")
 -- Leap.nvim keybinds
 vim.keymap.set("n", "r", "<Plug>(leap)")
 vim.keymap.set("n", "R", "<Plug>(leap-from-window)")
 
 -- Oil keybinds
 vim.keymap.set("n", "<BS>", "-") -- Backspace to go back one dir
+
+-- AutoCommands
+vim.cmd("autocmd BufWritePost ~/.config/waybar/config.jsonc silent !killall -SIGUSR2 waybar")
