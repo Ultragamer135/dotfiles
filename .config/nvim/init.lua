@@ -938,7 +938,8 @@ require("lazy").setup({
 
 -- My keybinds =]
 vim.keymap.set("i", "<a-Down>", "yyp")
-vim.keymap.set("n", "<C-k>", " sf")
+-- Vertical splits
+vim.keymap.set("n", '"', "v")
 -- Leap.nvim keybinds
 vim.keymap.set("n", "r", "<Plug>(leap)")
 vim.keymap.set("n", "R", "<Plug>(leap-from-window)")
