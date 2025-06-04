@@ -14,7 +14,8 @@ window#waybar {
 }
 
 window#waybar.hidden {
-    opacity: 1;
+    background-color: rgba(0, 0, 0, 0);
+    opacity: 0;
 }
 
 /*
