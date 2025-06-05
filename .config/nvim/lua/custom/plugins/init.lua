@@ -27,4 +27,5 @@ return {
 		opts = {},
 	},
 	{ "tidalcycles/vim-tidal" }, -- Yay music
+	{ "Apeiros-46B/qalc.nvim" }, -- Yay calculator
 }
