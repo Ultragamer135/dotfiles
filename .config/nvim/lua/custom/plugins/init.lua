@@ -14,7 +14,18 @@ return {
 		-- Lazy loading is not recommended because it is very tricky to make it work correctly in all situations.
 		lazy = false,
 	},
-	{ "ggandor/leap.nvim" }, -- Leap around file with R
+	{
+		"folke/flash.nvim", -- Better movements
+		event = "VeryLazy",
+		opts = {},
+		keys = { {
+			"r",
+			mode = { "n", "x", "o" },
+			function()
+				require("flash").jump()
+			end,
+		} },
+	},
 	{ "tpope/vim-repeat" },
 	{ "tpope/vim-fugitive" }, -- Git commands
 	{ "tpope/vim-rhubarb" }, -- Fugitive github support
