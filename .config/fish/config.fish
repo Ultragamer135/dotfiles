@@ -38,5 +38,6 @@ fish_add_path /usr/local/go/bin
 function gitignore; curl -sL https://www.gitignore.io/api/$argv; end # Gitignore generator
 function wttr; curl "https://wttr.in/$argv?1F"; end # Weather
 function Oil; nvim +Oil $argv; end # Open oil in current dir
-function cheat; curl cheat.sh/$argv | bat; end # Cheat sheet!
+function cheat; curl cheat.sh/(string join + $argv) | bat; end # Cheat sheet!
+which cht.sh &>/dev/null && function cheat; cht.sh $argv | bat; end
 function mkcd; mkdir -p $argv[1] && cd $argv[1]; end # Make a directory and enter it
