@@ -27,43 +27,38 @@ return {
 		} },
 	},
 	{ "tpope/vim-repeat" },
+	-- Git stuffz
 	{ "tpope/vim-fugitive" }, -- Git commands
 	{ "tpope/vim-rhubarb" }, -- Fugitive github support
 	{ "kdheepak/lazygit.nvim" }, -- LazyGit integration
+	-- Visual
 	{ "Makaze/AnsiEsc" }, -- Attempt to render ansi escape codes correctly
 	{ "xiyaowong/transparent.nvim" }, -- Pretty transparency
 	{ "winston0410/range-highlight.nvim" }, -- Highlight ranges in nvim commands
-	{ "tidalcycles/vim-tidal" }, -- Yay music
+	-- Markdown
 	{
-		"OXY2DEV/markview.nvim",
+		"OXY2DEV/markview.nvim", -- Markdown support
 		lazy = false,
 		opts = {
 			markdown = {
-				headings = { shift_width = 0 },
+				headings = { shift_width = 0 }, -- Don't shift headings
 				list_items = {
 					marker_minus = {
 						text = "─",
-					},
-				},
-				code_blocks = {
-					style = "block",
-					default = {
-						block_hl = "MarkviewCode",
-						pad_hl = "MarkviewCode",
 					},
 				},
 			},
 		},
 	},
 	{
-		"obsidian-nvim/obsidian.nvim",
+		"obsidian-nvim/obsidian.nvim", -- Obsidian support
 		dependencies = { "nvim-lua/plenary.nvim", "hrsh7th/nvim-cmp", "nvim-telescope/telescope.nvim" },
 		opts = {
 			dir = "~/notes",
-			completion = { nvim_cmp = true },
-			new_notes_location = "current_dir",
-			picker = { name = "telescope.nvim" },
-			note_id_func = function(title)
+			new_notes_location = "current_dir", -- Always make notes in current dir
+			completion = { nvim_cmp = true }, -- Completions
+			picker = { name = "telescope.nvim" }, -- Picker
+			note_id_func = function(title) -- Note ID = Name of note
 				if title ~= nil then
 					return title:gsub(" ", "-"):gsub("[^A-Za-z0-9-]", ""):lower()
 				else
@@ -72,4 +67,5 @@ return {
 			end,
 		},
 	},
+	{ "jbyuki/venn.nvim", lazy = false, keys = { { "\\", ":VBox<CR>", mode = "v" } } }, -- Diagram drawing
 }

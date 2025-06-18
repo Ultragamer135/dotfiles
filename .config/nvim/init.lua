@@ -938,6 +938,7 @@ require("lazy").setup({
 
 -- My keybinds =]
 vim.keymap.set("i", "<a-Down>", "yyp")
+-- vim.keymap.set("v", "\\", ":VBox<CR>")
 -- Vertical splits
 vim.keymap.set("n", '"', "v")
 -- Oil keybinds
