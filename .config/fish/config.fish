@@ -23,6 +23,7 @@ function :q! # Kill session and exit
 end
 abbr --add pacman sudo pacman # Because I'm tired of typing 'sudo'
 abbr --add oil Oil
+abbr --add '.' Oil
 abbr --add astro pnpm astro
 
 # pnpm
