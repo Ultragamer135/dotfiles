@@ -944,8 +944,6 @@ vim.keymap.set("n", '"', "v")
 -- Oil keybinds
 vim.keymap.set("n", "<BS>", "-") -- Backspace to go back one dir
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
--- My Opts
-vim.opt.conceallevel = 2
 
 -- AutoCommands
 vim.cmd("autocmd BufWritePost ~/.config/waybar/config.jsonc silent !killall -SIGUSR2 waybar")
