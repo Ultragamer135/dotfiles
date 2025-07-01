@@ -412,11 +412,9 @@ bind-key -n C-t new-window
 
 # only show status bar if there is more then one window
 bind b set status
-set-hook -g after-client-attached 'if "[ #{session_windows} -gt 1 ]" "set status on"'
-set-hook -g after-new-window      'if "[ #{session_windows} -gt 1 ]" "set status on"'
-set-hook -g after-kill-pane       'if "[ #{session_windows} -lt 2 ]" "set status off"'
-# set-hook -g pane-exited           'if "[ #{session_windows} -lt 2 ]" "set status off"'
-# set-hook -g window-layout-changed 'if "[ #{session_windows} -lt 2 ]" "set status off"'
+# set-hook -g after-client-attached 'if "[ #{session_windows} -gt 1 ]" "set status on"'
+# set-hook -g after-new-window      'if "[ #{session_windows} -gt 1 ]" "set status on"'
+# set-hook -g after-kill-pane       'if "[ #{session_windows} -lt 2 ]" "set status off"'
 
 # -- tpm -----------------------------------------------------------------------
 
