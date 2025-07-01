@@ -11,6 +11,7 @@ config.bind('<Ctrl+t>', 'cmd-set-text -s :open -t')
 config.bind('<Ctrl+Shift+t>', 'open -t')
 config.bind('<Ctrl+f>', 'cmd-set-text /')
 config.bind('a', 'mode-enter insert')
+config.bind('U', 'back')
 ## Visual mode arrows
 config.bind('Up', 'move-to-prev-line', mode='caret')
 config.bind('Down', 'move-to-next-line', mode='caret')
