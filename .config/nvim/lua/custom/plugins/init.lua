@@ -40,6 +40,9 @@ return {
 		"OXY2DEV/markview.nvim", -- Markdown support
 		lazy = false,
 		opts = {
+			experimental = {
+				check_rtp_message = false,
+			},
 			markdown = {
 				headings = { shift_width = 0 }, -- Don't shift headings
 				list_items = {
