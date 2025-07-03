@@ -54,7 +54,11 @@ return {
 		"obsidian-nvim/obsidian.nvim", -- Obsidian support
 		dependencies = { "nvim-lua/plenary.nvim", "hrsh7th/nvim-cmp", "nvim-telescope/telescope.nvim" },
 		opts = {
-			dir = "~/notes",
+			workspaces = {
+				{
+					path = "~/notes",
+				},
+			},
 			new_notes_location = "current_dir", -- Always make notes in current dir
 			completion = { nvim_cmp = true }, -- Completions
 			picker = { name = "telescope.nvim" }, -- Picker
