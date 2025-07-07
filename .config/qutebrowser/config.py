@@ -3,6 +3,8 @@ c.auto_save.session = True
 c.colors.webpage.darkmode.enabled = True
 c.colors.webpage.preferred_color_scheme = "dark"
 c.editor.command = ["kitty", "nvim", "{file}"];
+c.statusbar.show = "in-mode"
+c.tabs.show = "multiple"
 # Keybinds
 ## Tabs
 config.bind('<Ctrl+Shift+Left>', 'tab-prev')
