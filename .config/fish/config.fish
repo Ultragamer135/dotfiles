@@ -24,9 +24,9 @@ end
 abbr --add pacman sudo pacman # Because I'm tired of typing 'sudo'
 abbr --add oil Oil
 abbr --add '.' Oil
-abbr --add astro pnpm astro
 abbr --add neofeels town neofeels
 abbr --add s kitten ssh
+abbr --add !! 'clear && exec fish'
 
 # pnpm
 set -gx PNPM_HOME "/home/elin/.local/share/pnpm"
