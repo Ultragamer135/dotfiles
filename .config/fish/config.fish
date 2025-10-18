@@ -45,3 +45,7 @@ function Oil; nvim "+Oil $argv"; end # Open oil in current dir
 function cheat; curl cheat.sh/(string join + $argv) | bat; end # Cheat sheet!
 which cht.sh &>/dev/null && function cheat; cht.sh $argv | bat; end
 function mkcd; mkdir -p $argv[1] && cd $argv[1]; end # Make a directory and enter it
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH

@@ -72,6 +72,7 @@ return {
 					return string.char(math.random(65, 90))
 				end
 			end,
+			legacy_commands = false,
 		},
 	},
 	{ "jbyuki/venn.nvim", lazy = false, keys = { { "\\", ":VBox<CR>", mode = "v" } } }, -- Diagram drawing

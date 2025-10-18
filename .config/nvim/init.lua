@@ -938,7 +938,7 @@ require("lazy").setup({
 
 -- My keybinds =]
 vim.keymap.set("i", "<a-Down>", "yyp")
-vim.keymap.set("n", "<C-k>", ":ObsidianQuickSwitch<CR>")
+vim.keymap.set("n", "<C-k>", ":Obsidian quick_switch<CR>")
 -- Vertical splits
 vim.keymap.set("n", '"', "v")
 -- Oil keybinds

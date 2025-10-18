@@ -9,3 +9,5 @@
 	name = Ren Nero
 [init]
 	defaultBranch = main
+[color]
+	ui = auto
