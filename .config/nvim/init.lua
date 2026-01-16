@@ -932,3 +932,4 @@ require('lazy').setup({
 -- My opts
 vim.o.tabstop = 4
 vim.o.shiftwidth = 4
+vim.o.textwidth = 0
