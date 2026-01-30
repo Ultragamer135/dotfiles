@@ -895,6 +895,7 @@ require('lazy').setup({
 -- vim: ts=2 sts=2 sw=2 et
 
 -- My opts
+vim.keymap.set('n', '-', '<CMD>Oil<CR>')
 vim.o.tabstop = 4
 vim.o.shiftwidth = 4
 vim.o.textwidth = 0

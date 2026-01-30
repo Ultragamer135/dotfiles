@@ -22,7 +22,7 @@ function :q! # Kill session and exit
     tmux kill-session; exit
 end
 abbr --add pacman sudo pacman # Because I'm tired of typing 'sudo'
-abbr --add '.' nvim "+Oil $argv"
+function '.'; nvim "+Oil $argv"; end
 abbr --add s kitten ssh
 abbr --add !! 'clear && exec fish'
 
