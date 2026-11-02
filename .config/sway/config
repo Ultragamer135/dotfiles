@@ -7,7 +7,7 @@ set $screenshot grimshot --notify savecopy
 ### Startup
 exec qs
 exec vicinae server
-exec kitty -1 --start-as=minimized
+exec kitty -1 --start-as=hidden
 exec_always autotiling
 
 ### Input
