@@ -1,0 +1,13 @@
+[credential "https://github.com"]
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = !/usr/bin/gh auth git-credential
+[user]
+	email = rennir@proton.me
+	name = Ren Nero
+[init]
+	defaultBranch = main
+[color]
+	ui = auto
+[credential]
+	helper = /usr/lib/git-core/git-credential-libsecret

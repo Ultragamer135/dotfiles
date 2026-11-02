@@ -1,0 +1,112 @@
+### Programs
+set $term kitty -1
+set $file_manager nautilus
+set $menu vicinae toggle
+set $screenshot grimshot --notify savecopy
+
+### Startup
+exec qs
+exec vicinae server
+exec kitty -1 --start-as=minimized
+exec_always autotiling
+
+### Input
+input type:keyboard {
+    xkb_layout us
+}
+
+input type:touchpad {
+    natural_scroll disabled
+}
+
+### Layout and appearance
+default_orientation horizontal
+gaps inner 5
+gaps outer 5
+
+default_border pixel 2
+default_floating_border pixel 2
+
+client.focused #33ccff #33ccff #ffffff #00ff99 #33ccff
+client.unfocused #595959aa #595959aa #ffffff #595959aa #595959aa
+client.focused_inactive #595959aa #595959aa #ffffff #595959aa #595959aa
+client.urgent #ff0000 #ff0000 #ffffff #ff0000 #ff0000
+
+# SwayFX visual effects
+corner_radius 10
+blur enable
+blur_passes 1
+blur_radius 3
+blur_saturation 1.1696
+shadows enable
+shadow_blur_radius 4
+shadow_color #1a1a1aee
+animation_duration_ms 250
+
+### Mouse
+focus_follows_mouse yes
+mouse_warping container
+
+### Window manipulation
+floating_modifier Mod4 normal
+
+### Keybindings
+set $mod Mod4
+
+bindsym $mod+q exec $term
+bindsym $mod+w kill
+bindsym $mod+m exec swaymsg exit
+bindsym $mod+e exec $file_manager
+bindsym $mod+v floating toggle
+bindsym Mod1+r exec $menu
+bindsym $mod+p split toggle
+bindsym $mod+j layout toggle split
+
+# Screenshots
+bindsym $mod+s exec $screenshot anything
+bindsym $mod+Shift+s exec $screenshot screen
+bindsym $mod+Mod1+s exec $screenshot active
+
+# Directional focus
+bindsym $mod+Left focus left
+bindsym $mod+Right focus right
+bindsym $mod+Up focus up
+bindsym $mod+Down focus down
+
+# Workspaces 1–10; Mod+0 selects workspace 10.
+bindsym $mod+1 workspace number 1
+bindsym $mod+Shift+1 move container to workspace number 1
+bindsym $mod+2 workspace number 2
+bindsym $mod+Shift+2 move container to workspace number 2
+bindsym $mod+3 workspace number 3
+bindsym $mod+Shift+3 move container to workspace number 3
+bindsym $mod+4 workspace number 4
+bindsym $mod+Shift+4 move container to workspace number 4
+bindsym $mod+5 workspace number 5
+bindsym $mod+Shift+5 move container to workspace number 5
+bindsym $mod+6 workspace number 6
+bindsym $mod+Shift+6 move container to workspace number 6
+bindsym $mod+7 workspace number 7
+bindsym $mod+Shift+7 move container to workspace number 7
+bindsym $mod+8 workspace number 8
+bindsym $mod+Shift+8 move container to workspace number 8
+bindsym $mod+9 workspace number 9
+bindsym $mod+Shift+9 move container to workspace number 9
+bindsym $mod+0 workspace number 10
+bindsym $mod+Shift+0 move container to workspace number 10
+
+# Cycle through workspaces on the current output.
+bindsym --whole-window $mod+button5 workspace next
+bindsym --whole-window $mod+button4 workspace prev
+
+# Multimedia and brightness controls
+bindsym --locked XF86AudioRaiseVolume exec wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+
+bindsym --locked XF86AudioLowerVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
+bindsym --locked XF86AudioMute exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+bindsym --locked XF86AudioMicMute exec wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
+bindsym --locked XF86MonBrightnessUp exec brightnessctl -e4 -n2 set 5%+
+bindsym --locked XF86MonBrightnessDown exec brightnessctl -e4 -n2 set 5%-
+bindsym --locked XF86AudioNext exec playerctl next
+bindsym --locked XF86AudioPause exec playerctl play-pause
+bindsym --locked XF86AudioPlay exec playerctl play-pause
+bindsym --locked XF86AudioPrev exec playerctl previous
